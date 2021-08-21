@@ -20,18 +20,19 @@ input{
 }
 
 .list{
-    width: 15%;
+    width: 25%;
     display: flex;
     align-items: center;
 }
+
 h3{
-    margin-left: 0.5rem;
+    margin-left: 1rem;
 }
 
 p{
     font-size: 1.3rem;
     color: red;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
     cursor: pointer;
 }
 
