@@ -37,10 +37,17 @@ function createUI(){
         // }
         
         let cross = document.createElement('p');
-        cross.innerText = 'X'
+        cross.innerText = 'Watch'
 
-        cross.addEventListener('click', (event) => {
-            list.style.display = 'none'
+
+        cross.addEventListener('click', () => {
+            if(cross.innerText === 'Watch'){
+                cross.innerText = 'Watched'
+                cross.style.color = 'green'
+            }else{
+                cross.innerText = 'Watch'
+                cross.style.color = 'red'
+            }
         })
 
         
