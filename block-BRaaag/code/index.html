@@ -41,27 +41,28 @@
             }
         })
 
-        function handlechange(event){
-            event.innerText = "Watched"
+        function handlchange(event){
+            let id = event.target.id;
+            allMovies[id].watched = !allMovies[id].watched;
+            createUI(allMovies, unorderlist)
         }
 
         var elem = React.createElement;
         function createUI(){
             event.preventDefault();
             // unorderlist.innerText = "";
-        let ui =  allMovies.map((each) => {
+            let ui =  allMovies.map((each, i) => {
 
-            return (
-                <li className="list">
-                <input className="checkbox" type="checkbox"  />
-                <h3>{each.name}</h3>
-                <p>{each.watched}</p>
-                <p>X</p>
-                </li>
-            )
-        });
-        ReactDOM.render(ui, unorderlist)
-        console.log(ui)
+                return (
+                    <li className="list">
+                    <input className="checkbox" type="checkbox"  />
+                    <h3>{each.name}</h3>
+                    <p id={i} onClick={handlchange}>{each.watched ? "To Watch" : "Watched"}</p>
+                    </li>
+                )
+            });
+            ReactDOM.render(ui, unorderlist)
+            console.log(ui)
         }
     
     </script>
