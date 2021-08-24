@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main>
+        <div class="input_div">
+            <input type="text" placeholder="Enter Your Movie Name">
+            <ul></ul>
+        </div>
+    </main>
+
+    
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+    
+        var input = document.querySelector('input')
+        var unorderlist = document.querySelector('ul')
+        var allMovies = [];
+
+        input.addEventListener('keyup', (event) => {
+            if(event.keyCode === 13 ){
+                allMovies.push({
+                    name : event.target.value,
+                    watched : true
+                })
+                event.target.value = ''
+                createUI()
+            }
+        })
+
+        function handlechange(event){
+            event.innerText = "Watched"
+        }
+
+        var elem = React.createElement;
+        function createUI(){
+            event.preventDefault();
+            // unorderlist.innerText = "";
+        let ui =  allMovies.map((each) => {
+
+            return (
+                <li className="list">
+                <input className="checkbox" type="checkbox"  />
+                <h3>{each.name}</h3>
+                <p>{each.watched}</p>
+                <p>X</p>
+                </li>
+            )
+        });
+        ReactDOM.render(ui, unorderlist)
+        console.log(ui)
+        }
+    
+    </script>
+</body>
+</html>
