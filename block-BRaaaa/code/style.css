@@ -1,0 +1,41 @@
+main{
+    width: 100%;
+}
+h2{
+    text-align: center;
+}
+.hello{
+    background-color: blue;
+}
+.input_div{
+    width: 30%;
+    border: 1px solid;
+    padding: 2rem;
+    margin: auto;
+}
+input{
+    display: block;
+    margin: auto;
+    padding: 0.5rem 1rem;
+}
+
+.list{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+h3{
+    margin-left: 1rem;
+}
+
+p{
+    font-size: 1.3rem;
+    color: red;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.checkbox:checked ~ .movieName{
+    text-decoration: line-through;
+}

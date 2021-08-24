@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Watch List</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <div class="input_div">
+            <h1>Movie Watch List</h1>
+            <input class="movie_input" type="text" placeholder="Enter your Movie Name">
+            <ul></ul>
+        </div>
+    </main>
+
+    <!-- react script files -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- bable scripts  -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        var input = document.querySelector('input')
+        var unorderlist = document.querySelector('ul')
+
+        var allMovies = []
+
+        input.addEventListener('keyup', (event) => {
+            if(event.keyCode === 13 ){
+                allMovies.push({
+                    movieName : event.target.value,
+                    watched : true
+                })
+                event.target.value = ''
+                createUI()
+            }
+        })
+
+        function handlechange(event){
+            var id = event.target.id;
+            allMovies[id].watched = !allMovies[id].watched
+            createUI(allMovies,unorderlist)
+        }
+
+        function createUI(){
+            var movieUI = allMovies.map((each, i) => {
+                return(
+                    <li className="list">
+                        <input className="checkbox" type="checkbox" />
+                        <h3 >{each.movieName}</h3>
+                        <p id={i} onClick={handlechange}>
+                            {each.watched ? "To Watch" : "Watched"}
+                        </p>
+                    </li>
+                )
+            })
+            ReactDOM.render(movieUI, unorderlist)
+            console.log(movieUI)
+        }
+
+        
+
+    </script>
+</body>
+</html>
