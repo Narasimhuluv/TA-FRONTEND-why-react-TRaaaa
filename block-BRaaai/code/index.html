@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Preview</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/17bbe460ec.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="main_root">
+
+        </div>
+    </main>
+
+    <!-- React scripts  -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel Script  -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        var root = document.querySelector('.main_root')
+        var rootChildDiv = <div className="inside_Div">
+            <div className="inside_small_Div">
+                <img src="https://images.unsplash.com/photo-1486314030120-d5ab85fe58cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80" alt=""/>
+                <div className="date flex justify_center items_center">
+                    <h3>27 MAR</h3>
+                </div>
+                <div className="photo flex justify_center items_center">
+                    <h3>PHOTOS</h3>
+                </div>
+            </div>
+
+
+            <article className="about">
+                <div className="about_inside">
+                    <h1>city lights in new york</h1>
+                    <h2>The city that never sleeps</h2>
+                    <p>New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.</p>
+                    <div className="comments">
+                    <nav>
+                        <ul className="flex">
+                            <li>o 6 mins ago</li>
+                            <li className="i_comment"><i class="fas fa-comments"></i> 39 comments</li>
+                        </ul>
+                    </nav>
+                </div>
+                </div>
+            </article>
+        </div>
+
+        ReactDOM.render(rootChildDiv, root)
+
+
+    </script>
+    
+</body>
+</html>
