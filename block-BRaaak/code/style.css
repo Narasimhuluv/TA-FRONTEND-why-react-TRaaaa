@@ -75,6 +75,12 @@ table {
 }
 .heading{
     text-align: center;
+    font-size: 5rem ;
+    font-weight: bolder;
+}
+.small_heading{
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .inside_small_Div{
@@ -93,8 +99,8 @@ img{
     border-radius: 50%;
     background-color: rgb(241, 97, 8);
     position: absolute;
-    top: 5rem;
-    right: 5rem;
+    top: 3rem;
+    right: 3rem;
 }
 
 h3{
