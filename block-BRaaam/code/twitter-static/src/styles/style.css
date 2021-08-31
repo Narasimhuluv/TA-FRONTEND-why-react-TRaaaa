@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    height: 98vh;
+    /* border: 1px solid red; */
+}
+
+.flex{
+    display: flex;
+}
+.flex_column{
+    flex-direction: column;
+}
+.flex_24{
+    flex: 0 1 20%;
+    /* border: 1px solid; */
+}
+.flex_30{
+    flex: 0 1 30%;
+}
+.flex_48{
+    flex: 0 1 48%;
+    /* border: 1px solid ; */
+}
+
+.justify_between{
+    justify-content: space-between;
+}
+.items_start{
+    align-items: flex-start;
+}
+.items_center{
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* aside left */
+.aside{
+    padding: 1.5rem;
+    line-height: 1.5;
+    height: 93vh;
+    box-shadow: -0px -2px 3px rgba(255,255,255,0.8),
+                0px 0px 3px rgba(0,0,0,0.5);
+}
+.icon{
+    font-size: 3rem;
+    color: skyblue;
+}
+i{
+    display: inline-block;
+    margin-right: 1rem;
+}
+h3{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.home{
+    color: skyblue;
+}
+
+.tweet{
+    /* border: 1px solid; */
+    padding: 0.5rem 2rem;
+    border-radius: 1.3rem;
+    background-color: skyblue;
+    color: white;
+    font-weight: bolder;
+    display: block;
+    margin: auto;
+    width: 30%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+.dog{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.profile{
+    margin-left: 1rem;
+    line-height: 1.3;
+}
+
+/* Main component */
+
+.main{
+    margin-left: 0.8rem;
+}
+        /* Header  */
+.header{
+    box-shadow: -0px -2px 3px rgba(255,255,255,0.8),
+                0px 0px 3px rgba(0,0,0,0.5);
+}
+.home_stars{
+    padding:0.5rem 1rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+}
+.input_fields{
+    padding: 1rem;
+    /* border-bottom: 1px solid; */
+}
+.input_area{
+    width: 100%;
+    margin-left: 1.3rem;
+}
+
+.input_area input{
+    border: none;
+    outline: none;
+    margin: 0.5rem 0;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
+}
+.icons i{
+    color: skyblue;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+}
+.tweet_send{
+    border: 1px solid;
+    padding: 0.4rem 1.5rem;
+    border-radius: 4rem;
+    background-color: skyblue;
+    color: white;
+}
+
+
+/* article  */
+.article{
+    margin-top: 0.8rem;
+    padding: 0.6rem 0.5rem;
+    border-radius: 0.4rem;
+    box-shadow: -0px -2px 3px rgba(255,255,255,0.8),
+                0px 0px 3px rgba(0,0,0,0.5);
+}
+.profile_article{
+    border: 1px solid grey;
+    margin-top: 0.5rem;
+}
+.details{
+    padding: 0.5rem;
+    line-height: 1.3;
+    /* border: 1px solid; */
+    margin-left: 1rem;
+}
+.sharing_icons{
+    width: 100%;
+    margin-top: 1rem;
+    color: skyblue;
+    font-size: 1.4rem;
+}
+
+/* Aside footer  */
+.footer{
+    margin-left: 0.8rem;
+    box-shadow: -0px -2px 3px rgba(255,255,255,0.8),
+                0px 0px 3px rgba(0,0,0,0.5);
+}
+.search{
+    padding: 1rem;
+}
+.search input{
+    width: 95%;
+    border: none;
+    padding: 10px 7px ;
+    border-radius: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.445);
+    background: rgba(192, 192, 192, 0.11);
+}
+
+.whats{
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+.covid_article{
+    /* border: 1px solid grey; */
+    margin-top: 1rem;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    box-shadow: -0px -2px 3px rgba(255,255,255,0.8),
+                0px 0px 3px rgba(0,0,0,0.5);
+}
+.covid{
+    width: 100px;
+    height: 100px;
+
+}
+
+
