@@ -1,0 +1,143 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Ubuntu', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* custome styles  */
+
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
+.flex{
+    display: flex;
+}
+.flex_column{
+    flex-direction: column;
+}
+.flex_24{
+    flex: 0 1 24%;
+    /* border: 1px solid; */
+}
+.flex_30{
+    flex: 0 1 30%;
+}
+.flex_48{
+    flex: 0 1 48%;
+    /* border: 1px solid ; */
+}
+.flex_wrap{
+    flex-wrap: wrap;
+}
+
+.justify_between{
+    justify-content: space-between;
+}
+.items_start{
+    align-items: flex-start;
+}
+.items_center{
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+
+/* Header  */
+
+.header a{
+    margin-left: 2rem;
+    font-size: 1.3rem;
+}
+.header img{
+    width: 70px;
+}
+
+/* Hero Section */
+.hero{
+    width: 100%;
+}
+.hero img{
+    width: 100%;
+}
+/* Articles */
+.heading{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-top: 5rem;
+}
+.eachcard h2{
+    margin-top: 1rem;
+    font-weight: bolder;
+    padding-bottom: 1rem;
+    line-height: 1.5;
+}
+.eachcard img{
+    width: 100%;
+}
+.eachcard{
+    border: 1px solid grey;
+    margin-top: 2rem;
+}
+.allarticles{
+    margin-top: 3rem;
+}
+
+/* Footer */
+footer{
+    padding: 1.5rem 0;
+}
+footer li{
+    margin-left: 3rem;
+    font-size: 2rem;
+    color: skyblue;
+}
+
