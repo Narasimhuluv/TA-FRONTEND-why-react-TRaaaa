@@ -1,11 +1,12 @@
-import database from '../data'
+// import database from '../data';
+import allArticles from '../data/data'
 function Articles(props){
     return(
         <section className="articles_sec">
             <div className="container">
                 <h1 className="heading">Articles</h1>
                 <div className="allarticles flex justify_between flex_wrap">  
-                    {database.map((element) => (
+                    {allArticles.map((element) => (
                         <Card {...element} /> 
                         // <Card  info={element} /> 
                         ))}
