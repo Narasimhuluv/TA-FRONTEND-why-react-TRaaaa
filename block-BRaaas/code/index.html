@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 3rem 2rem;
+            background: none;
+            display: inline-block;
+            margin: 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            border: 1px solid rgba(128, 128, 128, 0.411);
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div id="root">
+
+        </div>
+    </main>
+
+     <!-- React scripts  -->
+     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+     <!-- Babel Script  -->
+     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+ 
+     <script type="text/babel">
+
+
+        let fruits = [
+        { id: 'apple', value: '🍎 apple' },
+        { id: 'orange', value: '🍊 orange' },
+        { id: 'grape', value: '🍇 grape' },
+        { id: 'pear', value: '🍐 pear' },
+        ];
+
+        
+        var root = document.getElementById('root')
+
+        function App(){
+
+            function handleclick(){
+                alert("Hello React Event")
+            }
+            function handleThree(){
+                alert("- To learn React use https://reactjs.org")
+                alert("- React and ReactDOM works together")
+                alert("- Babel helps in writing JSX")
+            }
+
+            var names = ['Arya', 'John', 'Bran'];
+        
+            return (
+                <div>
+                    <button onClick={handleclick}>Hello</button>
+                    <button onClick={handleThree}>How can I help you?</button>
+
+                    <div>
+                        {
+                        names.map((name)=> (
+                            <button onClick={()=> {alert(`Hello ${name}`)}}>{name}</button>
+                        ))
+                        }    
+                    </div>
+
+                    <Fruits />
+                </div>
+            )
+        }
+        
+
+            function Fruits(props){
+                return (
+                    <div>
+                        {
+                            fruits.map((each) => (
+                                <button onClick={()=> alert(`Yummy ${each.value}`)} key={each.id}>{each.value}</button>
+                            ))
+                        }
+                    </div>
+                )
+            }
+
+
+        ReactDOM.render(<App />, root)
+
+     </script>
+    
+</body>
+</html>
