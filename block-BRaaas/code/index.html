@@ -7,8 +7,15 @@
     <title>Document</title>
     <style>
         button{
-            display: block;
-            margin-top: 1.5rem;
+            padding: 3rem 2rem;
+            background: none;
+            display: inline-block;
+            margin: 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            border: 1px solid rgba(128, 128, 128, 0.411);
+            font-size: 1.1rem;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -50,18 +57,21 @@
                 alert("- Babel helps in writing JSX")
             }
 
-            function userClick(){
-                var users = ['Arya', 'John', 'Bran'];
-                users.map((eleme)=> {
-                    alert(`Hello ${eleme}`)
-                })
-            }
-
+            var names = ['Arya', 'John', 'Bran'];
+        
             return (
                 <div>
                     <button onClick={handleclick}>Hello</button>
                     <button onClick={handleThree}>How can I help you?</button>
-                    <button onClick={userClick}>user Click</button>
+
+                    <div>
+                        {
+                        names.map((name)=> (
+                            <button onClick={()=> {alert(`Hello ${name}`)}}>{name}</button>
+                        ))
+                        }    
+                    </div>
+
                     <Fruits />
                 </div>
             )
@@ -69,14 +79,11 @@
         
 
             function Fruits(props){
-                function eachclick(event){
-                    alert(`hello ${event.value}`)
-                }
                 return (
                     <div>
                         {
                             fruits.map((each) => (
-                                <button onClick={(event)=> eachclick(props,event)} key={each.id}>{each.value}</button>
+                                <button onClick={()=> alert(`Yummy ${each.value}`)} key={each.id}>{each.value}</button>
                             ))
                         }
                     </div>
