@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="root">
+
+    </div>
+
+    <!-- react scripts  -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- react scripts ended  -->
+
+    <!-- babel script  -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        var root = document.getElementById('root');
+
+        let buttonSizes = {
+            LARGE : "large",
+            MEDIUM : "medium",
+            SMALL : "small"
+        }
+
+
+        let buttonTypes = {
+            PRIMARY : "primary",
+            SECONDARY : "secondary",
+            TERTIARY : "tertiary"
+        }
+
+
+        function App() {
+            return(
+                <div className="">
+                    <Button label="Button" />
+                    <Button label="Button" type={buttonTypes.PRIMARY} size={buttonSizes.SMALL}/>
+                    <Button label="Button" type={buttonTypes.SECONDARY} size={buttonSizes.MEDIUM}/>
+                    <Button label="Button" type={buttonTypes.TERTIARY} size={buttonSizes.LARGE}/>
+                    <Button disabled />
+                    <Button onClickHandler={() => alert("You clicked me")}/>
+                </div>
+            )
+        }
+
+
+    function Button(props){
+        function getStyles(){
+            return `button button-${props.type ? props.type : buttonTypes.PRIMARY}  button-${props.size ? props.size : buttonSizes.MEDIUM}`;
+        }
+        return <button onClick={props.onClickHandler} className={getStyles() + " block"} disabled={props.disabled} >{props.label || "Button"}</button>
+    
+    }   
+
+
+        ReactDOM.render(<App />, root)
+    </script>
+</body>
+</html>
