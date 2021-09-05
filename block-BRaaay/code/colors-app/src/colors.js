@@ -1,5 +1,5 @@
-{
-  "gray": [
+let colors = {
+  "gray" : [
     "#f8f9fa",
     "#f1f3f5",
     "#e9ecef",
@@ -156,3 +156,6 @@
     "#d9480f"
   ]
 }
+
+
+export default colors;
