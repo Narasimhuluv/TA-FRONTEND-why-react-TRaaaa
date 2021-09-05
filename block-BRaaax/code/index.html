@@ -23,42 +23,50 @@
     <script type="text/babel">
         var root = document.getElementById('root');
 
-        let buttonSizes = {
-            LARGE : "large",
-            MEDIUM : "medium",
-            SMALL : "small"
-        }
+  
+    // function App(){
+    //     return(
+    //         <div>
+    //             <Button name="click me" />
+    //             <Button name="click me" type="secondary" size="medium"/>
+    //             <Button name="click me" type="teritiary" size="large"/>
+    //             <Button name="click me" clickHandler={() => alert("you clicked me")}/>
+    //         </div>
+    //     )
+    // }
+
+    // function Button(props){
+    //     function styles(){
+    //         return `button button-${props.type} button-${props.size} `
+    //     }
+    //     return(
+    //         <div>
+    //            <button className={styles()} onClick={props.clickHandler}>{props.name}</button>
+    //         </div>
+    //     )
+    // }
 
 
-        let buttonTypes = {
-            PRIMARY : "primary",
-            SECONDARY : "secondary",
-            TERTIARY : "tertiary"
-        }
-
-
-        function App() {
-            return(
-                <div className="">
-                    <Button label="Button" />
-                    <Button label="Button" type={buttonTypes.PRIMARY} size={buttonSizes.SMALL}/>
-                    <Button label="Button" type={buttonTypes.SECONDARY} size={buttonSizes.MEDIUM}/>
-                    <Button label="Button" type={buttonTypes.TERTIARY} size={buttonSizes.LARGE}/>
-                    <Button disabled />
-                    <Button onClickHandler={() => alert("You clicked me")}/>
-                </div>
-            )
-        }
-
+    function App(){
+        return(
+            <div>
+                <Button label="click me" />
+                <Button label="click me" clickhandler={() => alert("you clicked me world")}/>
+            </div>
+        )
+    }
 
     function Button(props){
-        function getStyles(){
-            return `button button-${props.type ? props.type : buttonTypes.PRIMARY}  button-${props.size ? props.size : buttonSizes.MEDIUM}`;
-        }
-        return <button onClick={props.onClickHandler} className={getStyles() + " block"} disabled={props.disabled} >{props.label || "Button"}</button>
-    
-    }   
+        return(
+            <div>
+                <button onClick={()=> alert("you clicked me")}>{props.label}</button>
+                <button onClick={props.clickhandler}>{props.label}</button>
 
+            </div>
+        )
+    }
+
+   
 
         ReactDOM.render(<App />, root)
     </script>
