@@ -1,0 +1,36 @@
+
+.button{
+    padding: 0.5rem 1.25rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    display: block;
+    background: none;
+    background-color: rgb(128, 128, 128);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.button-secondary{
+    padding: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    display: block;
+    width: 10rem;
+}
+
+.button-teritiary{
+    padding: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    display: block;
+    width: 16rem;
+}
+
+.button-disabled{
+    opacity: 50%;
+}
+

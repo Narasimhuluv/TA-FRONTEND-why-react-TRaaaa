@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="root">
+
+    </div>
+
+    <!-- react scripts  -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- react scripts ended  -->
+
+    <!-- babel script  -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        var root = document.getElementById('root');
+
+  
+    // function App(){
+    //     return(
+    //         <div>
+    //             <Button name="click me" />
+    //             <Button name="click me" type="secondary" size="medium"/>
+    //             <Button name="click me" type="teritiary" size="large"/>
+    //             <Button name="click me" clickHandler={() => alert("you clicked me")}/>
+    //         </div>
+    //     )
+    // }
+
+    // function Button(props){
+    //     function styles(){
+    //         return `button button-${props.type} button-${props.size} `
+    //     }
+    //     return(
+    //         <div>
+    //            <button className={styles()} onClick={props.clickHandler}>{props.name}</button>
+    //         </div>
+    //     )
+    // }
+
+
+    function App(){
+        return(
+            <div>
+                <Button label="click me" />
+                <Button label="click me" clickhandler={() => alert("you clicked me world")}/>
+            </div>
+        )
+    }
+
+    function Button(props){
+        return(
+            <div>
+                <button onClick={()=> alert("you clicked me")}>{props.label}</button>
+                <button onClick={props.clickhandler}>{props.label}</button>
+
+            </div>
+        )
+    }
+
+   
+
+        ReactDOM.render(<App />, root)
+    </script>
+</body>
+</html>
